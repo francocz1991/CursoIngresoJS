@@ -7,7 +7,9 @@ function MostrarAumento()
 	var importe;
 	var importeConDescuento;
 
-	importe = parseInt(document.getElementById("importe").value);
+	importe = document.getElementById("importe").value;
+
+	importe = parseInt(importe);
 
 	importeConDescuento = importe-((importe*25)/100);
 
