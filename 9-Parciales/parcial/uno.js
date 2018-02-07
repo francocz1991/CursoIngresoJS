@@ -2,9 +2,14 @@
 function Mostrar()
 {
 	var base;
-	base = parseInt(document.getElementById('laBase').value);
 	var perimetro;
+
+	base = document.getElementById('laBase').value;
+
+	base = parseInt(base);
+	
 	perimetro = base*4;
+	
 	alert("El perimetro es: "+perimetro);
 
 }

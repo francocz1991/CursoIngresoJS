@@ -5,8 +5,11 @@ function Mostrar()
 	var perimetro;
 	var cantidadDeHilo;
 
-	largo = parseInt(document.getElementById("alrgo").value);
-	ancho = parseInt(document.getElementById("ancho").value);
+	largo = document.getElementById("alrgo").value;
+	ancho = document.getElementById("ancho").value;
+
+	largo = parseInt(largo);
+	ancho = parseInt(ancho);
 
 	perimetro = largo+largo+ancho+ancho;
 	cantidadDeHilo = perimetro*3;
