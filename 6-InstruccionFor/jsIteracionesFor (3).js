@@ -58,6 +58,12 @@ function Mostrar()
 				break;
 
 			case 7:
+				var porcentaje = (contador7/contador)*100;
+				if (porcentaje>7)
+				{
+					contador--;
+					continue;
+				}
 				contador7++;
 				break;
 
