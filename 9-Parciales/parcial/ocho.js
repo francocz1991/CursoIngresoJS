@@ -20,12 +20,13 @@ function Mostrar()
 	var acumuladorMujeres =0;
 	var edad = 0;
 	var menorEdad = 100;
-	var nombreMenorEdad;
+	var sexoMenorEdad;
 	var acumuladorEdades = 0;
 	var promedioEdades;
 	var contadorAprobados = 0;
 	var contadorPares = 0;
 	var contadorImpares = 0;
+	var contadorDeCeros = 0;
 	
 
 	while(continuar!="no")
@@ -90,7 +91,7 @@ function Mostrar()
 		if (edad<menorEdad)
 		{
 			menorEdad = edad;
-			nombreMenorEdad = alumnos;
+			sexoMenorEdad = sexo;
 
 		}
 
@@ -100,13 +101,20 @@ function Mostrar()
 			contadorAprobados++;
 		}
 
-		if (nota%2==0 % nota!=0)
+		if (nota == 0)
 		{
-			contadorPares++;
+			contadorDeCeros++;
 		}
 		else
 		{
-			contadorImpares++;
+			if (nota%2==0)
+			{
+				contadorPares++;
+			}
+			else
+			{
+				contadorImpares++;
+			}
 		}
 
 		continuar = prompt("No para seguir");
@@ -123,7 +131,7 @@ function Mostrar()
 	document.write("cantidad de hombre desaprobados: "+hombresDesaprobados+"<br>");
 	document.write("Nombre de mejor nota: "+nombreMejorNota+"<br>");
 	document.write("Promedio nota mujeres: "+promedioNotasMujeres+"<br>");
-	document.write("Nombre del menor de edad: "+nombreMenorEdad+"<br>");
+	document.write("Sexo del menor de edad: "+sexoMenorEdad+"<br>");
 	document.write("Promedio de edad de los que aprobaron: "+promedioEdades+"<br>");
 	document.write("Cantidad de notas pares: "+contadorPares+"<br>");
 	document.write("Cantidad de notas impares: "+contadorImpares+"<br>");
